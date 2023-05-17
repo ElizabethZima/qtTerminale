@@ -1,9 +1,5 @@
 #include "mainwindow/mainwindow.hpp"
 #include <QApplication>
-#include <iostream>
-#include <vector>
-
-
 int currency = 1000;
 
 

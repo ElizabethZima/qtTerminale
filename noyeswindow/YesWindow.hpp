@@ -26,11 +26,14 @@ public:
 
 
 signals:
-    void withdrawWindow();  // Сигнал для первого окна на открытие
+    void withdrawWindow();
+
+   // Сигнал для первого окна на открытие
 
 private slots:
 
     void on_ExitButton_clicked();
+
 
 private:
 

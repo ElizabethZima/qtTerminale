@@ -32,6 +32,7 @@ private slots:
     void on_WithdrawButton_clicked();
     void on_ExitButton_clicked();
 
+
 private:
     Ui::WithdrawWindow *ui{};
     YesWindow* yesWindow;

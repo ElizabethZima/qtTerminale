@@ -5,9 +5,6 @@ YesWindow::YesWindow(QWidget *parent) :
         ui(new Ui::YesWindow)
 {
     ui->setupUi(this);
-
-
-
 }
 
 YesWindow::~YesWindow()
