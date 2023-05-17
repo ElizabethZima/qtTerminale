@@ -5,6 +5,9 @@ DepositeWindow::DepositeWindow(QWidget *parent) :
         ui(new Ui::DepositeWindow)
 {
     ui->setupUi(this);
+
+    yesWindow = new YesWindow();
+    connect(yesWindow, &YesWindow::withdrawWindow, this, &DepositeWindow::show);
 }
 
 DepositeWindow::~DepositeWindow()
@@ -17,7 +20,12 @@ void DepositeWindow::on_ExitButton_clicked() {
     emit firstWindow(); // И вызываем сигнал на открытие главного окна
 }
 
-double DepositeWindow::getMoney() {
-    return ui->lineEdit->text().toInt();
+
+
+void DepositeWindow::on_okButton_clicked() {
+    int money = ui->lineEdit->text().toInt();
+    currency += money;
+    yesWindow->showw(currency);
+
 }
 

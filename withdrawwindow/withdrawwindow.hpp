@@ -3,6 +3,9 @@
 
 #include <../ui_withdrawwindow.h>
 #include "../withdrawwindow/withdrawwindow.hpp"
+#include "../noyeswindow/YesWindow.hpp"
+#include "../noyeswindow/nowindow.hpp"
+
 #include <QMainWindow>
 #include <QtWidgets/QLineEdit>
 
@@ -26,11 +29,13 @@ signals:
 
 private slots:
     // Слот-обработчик нажатия кнопки
-   // void on_WithdrawButton_clicked();
+    void on_WithdrawButton_clicked();
     void on_ExitButton_clicked();
 
 private:
     Ui::WithdrawWindow *ui{};
+    YesWindow* yesWindow;
+    NoWindow* noWindow;
 };
 
 

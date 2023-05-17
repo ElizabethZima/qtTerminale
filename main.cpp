@@ -5,7 +5,7 @@
 #include "include/Terminale.hpp"
 #include "include/Deposite.hpp"
 
-int currency = 900;
+int currency = 1000;
 std::vector<Terminale*> commands;
 
 void Visitor(Terminale* terminal){

@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->label->setText("Balance " + QString::number(currency));
+
     if(currency < 100) ui->WithdrawButton->setEnabled(false);
     if(currency < 50) ui->PayButton->setEnabled(false);
 
@@ -17,9 +19,9 @@ MainWindow::MainWindow(QWidget *parent) :
     fWindow = new PayWindow();
 
     // подключаем к слоту запуска главного окна по кнопке во втором окне
-    connect(sWindow, &DepositeWindow::firstWindow, this, &MainWindow::show);
-    connect(tWindow, &WithdrawWindow::firstWindow, this, &MainWindow::show);
-    connect(fWindow, &PayWindow::firstWindow, this, &MainWindow::show);
+    connect(sWindow, &DepositeWindow::firstWindow, this, &MainWindow::showfunc);
+    connect(tWindow, &WithdrawWindow::firstWindow, this, &MainWindow::showfunc);
+    connect(fWindow, &PayWindow::firstWindow, this, &::MainWindow::showfunc);
 }
 
 MainWindow::~MainWindow()
@@ -44,4 +46,14 @@ void MainWindow::on_WithdrawButton_clicked() {
 void MainWindow::on_PayButton_clicked() {
     fWindow->show();  // Показываем второе окно
     this->close();    // Закрываем основное окно
+}
+
+void MainWindow::showfunc() {
+    this->show();
+    ui->label->setText("Balance " + QString::number(currency));
+
+    if(currency < 100) ui->WithdrawButton->setEnabled(false);
+    if(currency < 50) ui->PayButton->setEnabled(false);
+
+
 }

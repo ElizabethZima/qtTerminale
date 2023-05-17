@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.7)
 project(untitled13)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -15,12 +15,15 @@ find_package(Qt5 COMPONENTS
         REQUIRED)
 
 set(SOURCE_LIB mainwindow/mainwindow.cpp src/Deposite.cpp
-        depositewindow/depositewindow.cpp withdrawwindow/withdrawwindow.cpp paywindow/paywindow.cpp )
+        depositewindow/depositewindow.cpp withdrawwindow/withdrawwindow.cpp paywindow/paywindow.cpp noyeswindow/YesWindow.cpp
+        noyeswindow/nowindow.cpp )
 
 set(HEADER_LIB mainwindow/mainwindow.hpp include/Terminale.hpp  include/Deposite.hpp
-        depositewindow/depositewindow.hpp withdrawwindow/withdrawwindow.hpp  paywindow/paywindow.hpp)
+        depositewindow/depositewindow.hpp withdrawwindow/withdrawwindow.hpp  paywindow/paywindow.hpp noyeswindow/YesWindow.hpp
+         noyeswindow/nowindow.hpp)
 
-set(UI_LIB mainwindow/mainwindow.ui depositewindow/depositewindow.ui withdrawwindow/withdrawwindow.ui paywindow/paywindow.ui)
+set(UI_LIB mainwindow/mainwindow.ui depositewindow/depositewindow.ui paywindow/paywindow.ui withdrawwindow/withdrawwindow.ui
+        noyeswindow/yeswindow.ui noyeswindow/nowindow.ui)
 
 add_executable(untitled13 main.cpp  ${SOURCE_LIB}   ${HEADER_LIB}  ${UI_LIB})
 
