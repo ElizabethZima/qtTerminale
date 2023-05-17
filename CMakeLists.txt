@@ -14,13 +14,11 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-set(SOURCE_LIB mainwindow/mainwindow.cpp src/Deposite.cpp
-        depositewindow/depositewindow.cpp withdrawwindow/withdrawwindow.cpp paywindow/paywindow.cpp noyeswindow/YesWindow.cpp
-        noyeswindow/nowindow.cpp )
+set(SOURCE_LIB mainwindow/mainwindow.cpp depositewindow/depositewindow.cpp withdrawwindow/withdrawwindow.cpp
+        paywindow/paywindow.cpp noyeswindow/YesWindow.cpp noyeswindow/nowindow.cpp )
 
-set(HEADER_LIB mainwindow/mainwindow.hpp include/Terminale.hpp  include/Deposite.hpp
-        depositewindow/depositewindow.hpp withdrawwindow/withdrawwindow.hpp  paywindow/paywindow.hpp noyeswindow/YesWindow.hpp
-         noyeswindow/nowindow.hpp)
+set(HEADER_LIB mainwindow/mainwindow.hpp depositewindow/depositewindow.hpp withdrawwindow/withdrawwindow.hpp
+        paywindow/paywindow.hpp noyeswindow/YesWindow.hpp noyeswindow/nowindow.hpp)
 
 set(UI_LIB mainwindow/mainwindow.ui depositewindow/depositewindow.ui paywindow/paywindow.ui withdrawwindow/withdrawwindow.ui
         noyeswindow/yeswindow.ui noyeswindow/nowindow.ui)

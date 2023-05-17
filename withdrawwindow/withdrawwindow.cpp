@@ -35,7 +35,7 @@ void WithdrawWindow::on_WithdrawButton_clicked() {
     else{
         noWindow->showw(currency);
     }
-
+    ui->lineEdit->clear();
 
     this->close();
 

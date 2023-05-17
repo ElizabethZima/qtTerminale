@@ -26,6 +26,8 @@ void DepositeWindow::on_okButton_clicked() {
     int money = ui->lineEdit->text().toInt();
     currency += money;
     yesWindow->showw(currency);
+    ui->lineEdit->clear();
+    this->close();
 
 }
 
