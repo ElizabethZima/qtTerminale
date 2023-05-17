@@ -3,6 +3,7 @@
 #include <../ui_paywindow.h>
 #include "../paywindow/paywindow.hpp"
 #include "../mobilewindow/mobilewindow.hpp"
+#include "../billwindow/billwindow.hpp"
 #include <QMainWindow>
 #include <QtWidgets/QLineEdit>
 extern int currency;
@@ -27,7 +28,7 @@ signals:
 
 private slots:
     // Слот-обработчик нажатия кнопки
-  //  void on_mobileButton_clicked();
+
     void on_billButton_clicked();
     void on_mobileButton_clicked();
     void on_ExitButton_clicked();
@@ -36,6 +37,7 @@ private:
     Ui::PayWindow *ui{};
 
     MobileWindow *mWindow;
+    BillWindow *billWindow;
 };
 
 

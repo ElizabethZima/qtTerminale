@@ -1,12 +1,9 @@
-//
-// Created by eliza on 17.05.2023.
-//
+#ifndef UNTITLED13_BILLWINDOW_HPP
+#define UNTITLED13_BILLWINDOW_HPP
 
-#ifndef UNTITLED13_MOBILEWINDOW_HPP
-#define UNTITLED13_MOBILEWINDOW_HPP
 
-#include <../ui_mobilewindow.h>
-#include "mobilewindow.hpp"
+#include <../ui_billwindow.h>
+#include "billwindow.hpp"
 #include "../noyeswindow/YesWindow.hpp"
 #include "../noyeswindow/nowindow.hpp"
 
@@ -16,16 +13,16 @@ extern int currency;
 
 
 namespace Ui {
-    class MobileWindow;
+    class BillWindow;
 }
 
-class MobileWindow : public QMainWindow
+class BillWindow : public QMainWindow
 {
 Q_OBJECT
 
 public:
-    explicit MobileWindow(QWidget *parent = nullptr);
-    ~MobileWindow();
+    explicit BillWindow(QWidget *parent = nullptr);
+    ~BillWindow();
 
 
 
@@ -39,12 +36,11 @@ private slots:
     void on_ExitButton_clicked();
 
 private:
-    Ui::MobileWindow *ui{};
+    Ui::BillWindow *ui{};
     YesWindow *yesWindow;
     NoWindow *noWindow;
 
 };
 
 
-
-#endif //UNTITLED13_MOBILEWINDOW_HPP
+#endif //UNTITLED13_BILLWINDOW_HPP

@@ -27,6 +27,7 @@ public:
 
 signals:
     void withdrawWindow();
+    void mobileWindow();
 
    // Сигнал для первого окна на открытие
 

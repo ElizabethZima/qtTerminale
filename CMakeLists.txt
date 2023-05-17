@@ -15,10 +15,12 @@ find_package(Qt5 COMPONENTS
         REQUIRED)
 
 set(SOURCE_LIB mainwindow/mainwindow.cpp depositewindow/depositewindow.cpp withdrawwindow/withdrawwindow.cpp
-        paywindow/paywindow.cpp noyeswindow/YesWindow.cpp noyeswindow/nowindow.cpp mobilewindow/mobilewindow.cpp )
+        paywindow/paywindow.cpp noyeswindow/YesWindow.cpp noyeswindow/nowindow.cpp mobilewindow/mobilewindow.cpp
+        billwindow/billwindow.cpp)
 
 set(HEADER_LIB mainwindow/mainwindow.hpp depositewindow/depositewindow.hpp withdrawwindow/withdrawwindow.hpp
-        paywindow/paywindow.hpp noyeswindow/YesWindow.hpp noyeswindow/nowindow.hpp  mobilewindow/mobilewindow.hpp)
+        paywindow/paywindow.hpp noyeswindow/YesWindow.hpp noyeswindow/nowindow.hpp  mobilewindow/mobilewindow.hpp
+        billwindow/billwindow.hpp)
 
 set(UI_LIB mainwindow/mainwindow.ui depositewindow/depositewindow.ui paywindow/paywindow.ui withdrawwindow/withdrawwindow.ui
         noyeswindow/yeswindow.ui noyeswindow/nowindow.ui mobilewindow/mobilewindow.ui)

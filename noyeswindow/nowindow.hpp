@@ -25,9 +25,9 @@ public:
     void showw(int currency);
 
 
-signals:
-    void withdrawWindow();  // Сигнал для первого окна на открытие
-
+//signals:
+//    void withdrawWindow();  // Сигнал для первого окна на открытие
+//    void mobileWindow();
 private slots:
 
     void on_ExitButton_clicked();

@@ -7,7 +7,7 @@ DepositeWindow::DepositeWindow(QWidget *parent) :
     ui->setupUi(this);
 
     yesWindow = new YesWindow();
-    connect(yesWindow, &YesWindow::withdrawWindow, this, &DepositeWindow::show);
+    //connect(yesWindow, &YesWindow::withdrawWindow, this, &DepositeWindow::show);
 }
 
 DepositeWindow::~DepositeWindow()
@@ -27,7 +27,7 @@ void DepositeWindow::on_okButton_clicked() {
     currency += money;
     yesWindow->showw(currency);
     ui->lineEdit->clear();
-    this->close();
+   // this->close();
 
 }
 

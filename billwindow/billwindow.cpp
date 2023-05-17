@@ -1,13 +1,14 @@
-#include "mobilewindow.hpp"
+#include "billwindow.hpp"
 
-void MobileWindow::on_ExitButton_clicked() {
+
+void BillWindow::on_ExitButton_clicked() {
     this->close();      // Закрываем окно
     emit payWindow(); // И вызываем сигнал на открытие главного окна
 }
 
-MobileWindow::MobileWindow(QWidget *parent):
-QMainWindow(parent),
-ui(new Ui::MobileWindow) {
+BillWindow::BillWindow(QWidget *parent):
+        QMainWindow(parent),
+        ui(new Ui::BillWindow) {
     ui->setupUi(this);
 
     yesWindow = new YesWindow();
@@ -16,16 +17,16 @@ ui(new Ui::MobileWindow) {
 //connect(noWindow, &NoWindow::mobileWindow, this, &::MobileWindow::show);
 }
 
-MobileWindow::~MobileWindow()
+BillWindow::~BillWindow()
 {
     delete ui;
 }
 
 
 
-void MobileWindow::on_okButton_clicked() {
+void BillWindow::on_okButton_clicked() {
 
-    int money = ui->lineEdit2->text().toInt();
+    int money = ui->lineEdit_2->text().toInt();
 
     if( money <= currency) {
         currency -= money;
@@ -35,5 +36,5 @@ void MobileWindow::on_okButton_clicked() {
         noWindow->showw(currency);
     }
     ui->lineEdit->clear();
-    ui->lineEdit2->clear();
+    ui->lineEdit_2->clear();
 }

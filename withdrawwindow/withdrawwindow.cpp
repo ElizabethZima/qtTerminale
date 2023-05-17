@@ -13,8 +13,8 @@ WithdrawWindow::WithdrawWindow(QWidget *parent) :
     yesWindow = new YesWindow();
     noWindow = new NoWindow();
 
-    connect(noWindow, &NoWindow::withdrawWindow, this, &WithdrawWindow::show);
-    connect(yesWindow, &YesWindow::withdrawWindow, this, &WithdrawWindow::show);
+//    connect(noWindow, &NoWindow::withdrawWindow, this, &WithdrawWindow::show);
+//    connect(yesWindow, &YesWindow::withdrawWindow, this, &WithdrawWindow::show);
 }
 void WithdrawWindow::on_ExitButton_clicked() {
     this->close();      // Закрываем окно
@@ -37,8 +37,7 @@ void WithdrawWindow::on_WithdrawButton_clicked() {
     else{
         noWindow->showw(currency);
     }
-    ui->lineEdit->clear();
 
-    this->close();
+    ui->lineEdit->clear();
 
 }

@@ -9,7 +9,9 @@ PayWindow::PayWindow(QWidget *parent) :
     ui->setupUi(this);
 
     mWindow = new MobileWindow();
+    billWindow = new BillWindow();
     connect(mWindow, &MobileWindow::payWindow, this, &PayWindow::show);
+    connect(billWindow, &BillWindow::payWindow, this, &PayWindow::show);
 }
 
 void PayWindow::on_ExitButton_clicked() {
@@ -23,7 +25,8 @@ PayWindow::~PayWindow()
 }
 
 void PayWindow::on_billButton_clicked() {
-
+    billWindow->show();
+    this->close();
 }
 
 void PayWindow::on_mobileButton_clicked() {
