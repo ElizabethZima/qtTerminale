@@ -4,6 +4,7 @@
 
 #ifndef UNTITLED13_MOBILEWINDOW_HPP
 #define UNTITLED13_MOBILEWINDOW_HPP
+#include <QRegExpValidator>
 
 #include <../ui_mobilewindow.h>
 #include "mobilewindow.hpp"

@@ -14,6 +14,15 @@ ui(new Ui::MobileWindow) {
     noWindow = new NoWindow();
 //    connect(yesWindow, &YesWindow::mobileWindow, this, &::MobileWindow::show);
 //connect(noWindow, &NoWindow::mobileWindow, this, &::MobileWindow::show);
+
+QString telRange = "[0-9]{10}";
+    QRegExp telRegex(telRange + "$");
+    QRegExpValidator *telValidator = new QRegExpValidator(telRegex, this);
+    /* Устанавливаем Валидатор на QLineEdit */
+    ui->lineEdit->setValidator(telValidator);
+
+
+
 }
 
 MobileWindow::~MobileWindow()
@@ -27,7 +36,9 @@ void MobileWindow::on_okButton_clicked() {
 
     int money = ui->lineEdit2->text().toInt();
 
-    if( money <= currency) {
+
+
+    if( money <=  currency ) {
         currency -= money;
         yesWindow->showw(currency);
     }
